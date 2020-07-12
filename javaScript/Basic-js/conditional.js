@@ -13,11 +13,10 @@ var savingAmount = 5000;
 // }else {
 //     console.log("Tor kopale biye nai");
 // }
-if(jobPaiso == true && savingAmount > 200000){
-    console.log("Aso tomar patri khuji");
-}else if(jobPaiso == true) {
-    console.log("ahcca koi din por dekhbo");
-}
-else{
-    console.log("Tor kopale biye nai");
+if (jobPaiso == true && savingAmount > 200000) {
+  console.log("Aso tomar patri khuji");
+} else if (jobPaiso == true) {
+  console.log("ahcca koi din por dekhbo");
+} else {
+  console.log("Tor kopale biye nai");
 }
