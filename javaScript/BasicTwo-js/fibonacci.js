@@ -13,5 +13,5 @@ function fibonacci(n) {
   }
   return fibo;
 }
-var result = fibonacci(12);
+var result = fibonacci(5);
 console.log(result);
