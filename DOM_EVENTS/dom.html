@@ -4,8 +4,45 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Explore DOM</title>
+      <style>
+            article {
+                  border: 2px solid tomato;
+                  border-radius: 20px;
+                  margin: 5px;
+                  padding: 5px;
+            }
+      </style>
 </head>
 <body>
+      <main>
+            <section>
+                  <h1>Exploring DOM</h1>
+                  <article>
+                        <h3>article-1</h3>
+                        <p class="author">author-1</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo officia provident ipsa quisquam, libero temporibus autem cupiditate rerum reprehenderit, debitis quae doloremque quas accusantium, architecto incidunt facilis deleniti. Perferendis, aliquam!</p>
+                  </article>
+                  <article>
+                        <h3>article-2</h3>
+                        <p class="author">author-2</p>
+                        <p class="description">Tenetur expedita ducimus iure explicabo exercitationem tempore eum quae ullam, quibusdam ipsa porro modi delectus, consectetur cumque reiciendis velit. Consectetur, aliquid officia ut sapiente maiores amet beatae nobis ab modi.</p>
+                  </article>
+                  <article>
+                        <h3>article-3</h3>
+                        <p class="author">author-3</p>
+                        <p class="description">Porro atque commodi enim beatae nobis, voluptatibus veritatis aliquam voluptas doloribus maiores, asperiores eligendi esse architecto cupiditate perferendis reprehenderit dolorum maxime sed sunt! Error, praesentium exercitationem nemo amet mollitia labore!</p>
+                  </article>
+            </section>
+      </main>
+
+      <main>
+            <section>
+                  <h1>Exploring DOM</h1>
+                  <p id="first">My first Paragraph</p>
+                  <p>My second Paragraph</p>
+            </section>
+      </main>
+
       <main>
             <section>
                   <h1>Exploring DOM</h1>
@@ -15,10 +52,14 @@
       </main>
 
       <script>
-            document.getElementById('first');
-            first.style.backgroundColor = 'yellow';
-            first.style.color = 'green';
-            first.style.fontSize = '45px';
+            var authors = document.getElementsByClassName('author');
+            for(var i = 0; i < authors.length; i++) {
+                  var element = authors[i];
+                  console.log(element.innerHTML);
+                  element.innerHTML = 'lekhok-' + i;
+                  element.style.backgroundColor = 'lightblue'
+                  element.style.margin = '10px';
+            }
       </script>
 </body>
 </html>
