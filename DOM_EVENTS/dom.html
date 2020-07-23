@@ -3,9 +3,22 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Explore DOM</title>
 </head>
 <body>
-      
+      <main>
+            <section>
+                  <h1>Exploring DOM</h1>
+                  <p id="first">My first Paragraph</p>
+                  <p>My second Paragraph</p>
+            </section>
+      </main>
+
+      <script>
+            document.getElementById('first');
+            first.style.backgroundColor = 'yellow';
+            first.style.color = 'green';
+            first.style.fontSize = '45px';
+      </script>
 </body>
 </html>
