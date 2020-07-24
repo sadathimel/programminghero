@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Explore DOM</title>
+      <style>
+            article {
+                  border: 2px solid tomato;
+                  border-radius: 20px;
+                  margin: 5px;
+                  padding: 5px;
+            }
+
+            .special h3 {}
+      </style>
+</head>
+
+<body>
+      <main>
+            <section>
+                  <h1>Exploring DOM</h1>
+                  <article id = "first-article">
+                        <h3>article-1</h3>
+                        <p title="i am the most importent Author" class="author" id="bestSeller">author-1</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo officia
+                              provident ipsa quisquam, libero temporibus autem cupiditate rerum reprehenderit, debitis
+                              quae doloremque quas accusantium, architecto incidunt facilis deleniti. Perferendis,
+                              aliquam!</p>
+                  </article>
+                  <article>
+                        <h3>article-2</h3>
+                        <p class="author">author-2</p>
+                        <p class="description">Tenetur expedita ducimus iure explicabo exercitationem tempore eum quae
+                              ullam, quibusdam ipsa porro modi delectus, consectetur cumque reiciendis velit.
+                              Consectetur, aliquid officia ut sapiente maiores amet beatae nobis ab modi.</p>
+                  </article>
+                  <article>
+                        <h3>article-3</h3>
+                        <p class="author">author-3</p>
+                        <p class="description">Porro atque commodi enim beatae nobis, voluptatibus veritatis aliquam
+                              voluptas doloribus maiores, asperiores eligendi esse architecto cupiditate perferendis
+                              reprehenderit dolorum maxime sed sunt! Error, praesentium exercitationem nemo amet
+                              mollitia labore!</p>
+                  </article>
+                  <article>
+                        <h3>Grocery List</h3>
+                        <ul id="gift-list">
+                              <li>gift item -1</li>
+                              <li>gift item -2</li>
+                              <li>gift item -3</li>
+                              <li>gift item -4</li>
+                              <li>gift item -5</li>
+                        </ul>
+                  </article>
+            </section>
+      </main>
+
+
+      <script>
+            const article = document.getElementById('first-article');
+            const newParagraph = document.createElement('p');
+            newParagraph.innerHTML = ' This is added by JavaScript';
+            article.appendChild(newParagraph);
+
+            // add one more gift item
+            const ul = document.getElementById('gift-list');
+            const li = document.createElement('li');
+            li.innerHTML = 'Brand new Gift';
+            ul.appendChild(li);
+      </script>
+</body>
+
+</html>
