@@ -1,22 +1,28 @@
-
-
 function evenify(num) {
   if (num % 2 == 0) {
-    console.log(num, ": is even number");
+    return num;
   } else {
-    console.log(num * 2, ": is odd number");
+    return num*2;
   }
 }
+var result = evenify(3)
+var square = result * result;
+console.log('square', square);
 
 function evenify_all(nums) {
+  var even_array = []
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
-    evenify(num);
+    var result = evenify(num);
+    even_array.push(result)
   }
+  return even_array;
 }
 
-nums = [5, 12, 89, 45, 18, 8];
-evenify_all(nums)
+var nums = [5, 12, 89, 45, 18, 8];
+var nums_even = evenify_all(nums)
+console.log(nums_even);
+// evenify_all(nums)
 
 friends_age = [13, 17, 19, 20, 18];
-evenify_all(friends_age);
+// evenify_all(friends_age);
