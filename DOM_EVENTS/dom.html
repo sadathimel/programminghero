@@ -11,15 +11,18 @@
                   margin: 5px;
                   padding: 5px;
             }
+            .special h3 {
+
+            }
       </style>
 </head>
 <body>
       <main>
             <section>
                   <h1>Exploring DOM</h1>
-                  <article>
+                  <article class="special">
                         <h3>article-1</h3>
-                        <p class="author">author-1</p>
+                        <p title="i am the most importent Author" class="author" id="bestSeller">author-1</p>
                         <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo officia provident ipsa quisquam, libero temporibus autem cupiditate rerum reprehenderit, debitis quae doloremque quas accusantium, architecto incidunt facilis deleniti. Perferendis, aliquam!</p>
                   </article>
                   <article>
@@ -52,11 +55,13 @@
       </main>
 
       <script>
-            var authors = document.getElementsByClassName('author');
+            document.body.style.backgroundColor = 'tomato';
+            var authors = document.querySelectorAll('.special h3');
             for(var i = 0; i < authors.length; i++) {
                   var element = authors[i];
-                  console.log(element.innerHTML);
-                  element.innerHTML = 'lekhok-' + i;
+                  // console.log(element.innerHTML);
+                  element.innerHTML = 'lekhok-' +(i + 1);
+                  element.setAttribute('title', 'All author is same');
                   element.style.backgroundColor = 'lightblue'
                   element.style.margin = '10px';
             }
