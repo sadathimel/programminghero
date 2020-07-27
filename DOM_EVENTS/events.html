@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Event management Company</title>
-</head>
-<body>
-      <h1>Exploring Events</h1>
-      <button onmouseout="handleClick()">Click me</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event management Company</title>
+  </head>
+  <body>
+    <h1 onclick="handleClick()">Exploring Events! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam quibusdam assumenda quaerat consequatur possimus aspernatur quidem itaque? Molestias, deleniti!</h1>
+    <button>Click me-0</button>
+    <button id="second">Click me-1</button>
+    <button>Click me-2</button>
+    <button id="lastPerson">Click me-3</button>
 
-      <script>
-            function handleClick(){
-                  console.log('someone is over me');
-            }
-      </script>
-</body>
+    <script>
+      document
+        .getElementById("lastPerson")
+        .addEventListener("click", function () {
+          document.body.style.color = "tomato";
+        });
+
+      // function handleClick(){
+      //       document.body.style.background = 'tomato';
+      // }
+      // const secondButton = document.getElementById('second');
+      // secondButton.addEventListener('click', handleClick);
+      // secondButton.onclick = handleClick;
+    </script>
+  </body>
 </html>
